@@ -1,6 +1,6 @@
 # PERSONAL ALIASES
 # Bu dosyayi yeri: /home/xalil/.oh-my-zsh/custom/aliases.zsh
-# yada eger bash kullanacaksan .bash_profile olarak kaydet.
+# yada eger bash kullanacaksan .bash_aliases olarak kaydet.
 
 #vim as manpager
 #alias vless='/usr/share/vim/vim80/macros/less.sh' 
