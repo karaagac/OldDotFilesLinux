@@ -1,0 +1,8 @@
+As root edit /etc/sudoers and place the following line:
+
+youruser    ALL=(ALL) NOPASSWD:ALL
+
+after
+
+# Allow members of group sudo to execute any command
+%sudo   ALL=(ALL:ALL) ALL
