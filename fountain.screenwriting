@@ -1,0 +1,15 @@
+# Convert fountain screenwriting text to pdf
+
+https://github.com/ifrost/afterwriting-labs/blob/master/docs/clients.md
+
+## After downloading afterwriting from the SOURCE, goto afterwritings folder then
+
+	npm install
+
+convert .fountain files to pdf in afterwriting folder, otherwise it will give errors.
+
+	node awc.js --source my_draft.fountain --pdf screenplay.pdf
+
+dosya ismi .fountain ile bitmek zorunda degil. Normal bir vim dosyasi olmasi yeterli.
+
+Visit the website above for more info.
