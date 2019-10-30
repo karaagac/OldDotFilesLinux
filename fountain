@@ -1,0 +1,118 @@
+# Convert fountain screenwriting text to pdf
+
+https://github.com/ifrost/afterwriting-labs/blob/master/docs/clients.md
+
+## After downloading afterwriting from the SOURCE, go to afterwritings folder then
+
+npm install
+
+convert .fountain files to pdf in afterwriting folder, otherwise it will give errors.
+
+node awc.js --source my_draft.fountain --pdf screenplay.pdf
+
+Yukaridaki kodu fountainconvert diye alias yaptim. Yani sadece asagidaki sekilde kullanabilirsin diledigin yerde.
+
+fountainconvert filename
+
+dosya ismi .fountain ile bitmek zorunda degil. Normal bir vim dosyasi olmasi yeterli.
+
+Visit the website above for more info.
+
+
+## Capitilize
+Bir dosyadaki cumlelerin ilk harfleri capitilize yapmak icin asagidaki siteden script buldum.
+
+https://askubuntu.com/questions/334544/how-to-uppercase-first-letter-of-the-first-word-in-each-sentence-using-shell-scr
+
+Bu script capitilize.sh olarak duruyor. Her cumlenin ilk harfini buyuk harf yapar otomatik olarak.
+
+## UPPERCASE ve lowercase yapmak
+Sahne basligi veya isimleri uppercase yada lowercase yapmak onemlidir.
+
+UPPERCASE
+
+gUU
+
+lowercase
+guu
+
+### Make a word Uppercase of lovercase by searching
+Let`s say we want to make all the words of ali to uppercase ALI. If you want to make it lovercase, change U to L
+
+:%s/\<ali\>/\U&/g
+
+### Make all scene headings capital
+
+:%s/\<int.*\>/\U&/g
+
+:%s/\<ext.*\>/\U&/g
+
+
+## Kelimeler arasindaki birden cok boslugu sil. 
+Asagidaki komut paragraflari etkilemiyor, bu nedenle gereksiz bosluklari silmek icin mukemmel.
+
+:%s/ \+/ /g
+
+## Remove space at the beginning of every line in all text
+left
+
+:%le
+
+## Replacing Multiple blank lines with a single blank line in vim
+Birden cok bos satir varsa sadece 1 bos satira indirger.
+
+:%!cat -s
+
+## Delete more than 1 space after period.
+You need to use sed for that. Redirect results to new file.
+
+sed -e "s/[[:space:]]\+/ /g" currentfile > newfile
+
+## Isimleri auto-complete yapmak
+Bunun icin ilk harfi yaz ve
+
+Control + n 
+
+## Her cumlenin sonuna yada basina nokta yada baska bir harf koy.
+Trelby ye import edince scene headingleri Capitilize ediyor zaten, buna gerek yok.
+
+### Sonuna eklemek icin
+Nokta icin. sona c ekle, confirm etsin.
+
+:%s/$/\./gc
+
+** icin
+
+:%s/$/\**/gc
+
+### Basina eklemek icin
+Basini belirtmek icin ^ isareti kullan.
+
+:%s/^/\**/gc
+
+## Remove all ** in file
+
+:%s/\*/\ /g
+
+## Scene numbers
+You shouldn`t add any scene numbers to script. That is Productions job.
+
+https://screenwriting.io/should-i-put-scene-numbers-in-my-screenplay/
+
+## Repeat last command
+Hit period to repeat last command. Usefull when uppercasing scene headings.
+
+.
+
+## Tip for search and replace 
+Let`s say we want to capitilize all INT. or EXT. lines
+
+/int
+gUU
+n
+.
+
+Meaning search for (/int) hit enter then hit gUU to capitiliza, then hit n for next /int then hit . to repeat last gUU command.
+
+You can apply that to anything, names etc.
+
