@@ -1,0 +1,46 @@
+###############################################################################
+# Urlview configuration file.
+# Ornek dosya asagida buldum
+# Bu dosya ~/.urlview olarak kaydedilmeli.
+# http://mcs.une.edu.au/doc/urlview/sample.urlview  
+# Luke Smith urlview how to
+# https://gist.github.com/LukeSmithxyz/94e6c01df3a67a6524dc38d2c92425d1
+# man urlview  <Man page>
+#
+# Put this file in: $HOME/.urlview
+# Put url_handler.sh in: /usr/bin
+#
+# You can call 'urlview' while in 'mutt' by pressing the Ctrl b keys.
+# Put these macros in your $HOME/.muttrc file.
+#
+# macro index \cb |urlview\n
+# macro pager \cb |urlview\n	
+#
+# You can call 'urlview' while in 'tin' by pressing | then a for article,
+# put urlview as the pipe command.
+# 
+# Regular expression to use to match URLs.
+
+#REGEXP (((http|https|ftp|gopher)|mailto):(//)?[^ >"\t]*|www\.[-a-z0-9.]+)[^ .,;\t>">\):]
+REGEXP (((http|https|ftp|gopher)|mailto)[.:][^ >"\t]*|www\.[-a-z0-9.]+)[^ .,;\t>">\):]
+
+# Command to invoke for selected URL.  Use lynx, netscape, or url_handler.sh
+# shell script.  Alternatively, you can leave COMMAND unset and set the BROWSER
+# environment variable instead.
+
+#COMMAND lynx %s
+#COMMAND netscape -remote 'openURL(%s)'
+#COMMAND url_handler.sh
+
+#Asagidaki komut ile scripts dosyasi icindeki webview komutu calistirilir. Luke smit videosuna bak. Cok verimli olmadi.
+#COMMAND webview
+
+# Quit urlview after launch
+#QUITONLAUNCH
+
+
+#Gotlbetu ekledigi komut
+## set browser
+## http://does-not-exist.org/mail-archives/mutt-users/msg18479.html
+## https://github.com/gotbletu/shownotes/blob/master/urlview_tmux.txt
+COMMAND exec >> /tmp/urlview.out 2>&1; set -x; firefox
