@@ -55,6 +55,33 @@ sudo apt install renameutils -y
 sudo apt install libmodule-build-perl -y
 sudo apt install libjson-perl -y
 sudo Build installdeps -y #youtube-viewer kurarken dosyanin icinde bu komutu ver.
+sudo apt install xbindkeys -y
+sudo apt install sxhkd -y
+sudo apt install npm -y
+sudo apt install ttf-mscorefonts-installer -y
+
+#install youtube-viewer
+sudo apt-get install libtinfo-dev -y
+sudo apt-get install libncurses5-dev -y
+sudo apt-get install libreadline-dev -y
+sudo apt-get install libunicode-linebreak-perl -y
+
+cd ~/Downloads
+git clone https://github.com/trizen/youtube-viewer
+cd youtube-viewer
+
+sudo apt-get install libmodule-build-perl libtinfo-dev \
+libncurses5-dev libreadline-dev libunicode-linebreak-perl -y
+
+perl Build.PL --gtk
+sudo ./Build installdeps  # hit <Enter> everywhere
+sudo ./Build install
+
+gtk-youtube-viewer # run it
+
+#
+
+sudo apt install libimage-exiftool-perl -y #exif tool
 
 # bash case-insensitive completion yapsin diye
 # sudo vim /etc/inputrc dosyasina asagidaki satiri ekle
