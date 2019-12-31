@@ -27,7 +27,7 @@ Bunu calistiramadim.
 ====
 %s/.\s"/."/g            "Remove space between . and quotation mark
 %s/!\s"/!"/g            "Remove space between ! and quotation mark
-%s/?\s"/?"/g            "Remove space between ? and quotation mark
+%s/\s?/?/g            "Remove space between ? and quotation mark
 
 Following line capitilize quotation mark sentences ends with  .?!...
 %s/\v("\w)(.{-})(\.|!|\?|\.{3})"/\U\1\e\2\3"/g
