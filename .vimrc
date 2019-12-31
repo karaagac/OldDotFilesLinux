@@ -42,9 +42,44 @@ set cursorline
 set complete+=kspell "Allow autocomplete. Usage; in vim hit Control + p or Control + n to auto complete
 
 " Turn on syntax colors
+"colo desert
 syntax on
 
+
+"solorized color scheme
+let g:solarized_termcolors=256
+set background=light
+colorscheme solarized
+
 " }}}
+
+".txt icin yazim hatalarini duzeltme 
+autocmd BufWritePre *.txt :%le                       "Align left
+autocmd BufWritePre *.txt :%s/[\.!?]\s*./\U&\E/g   "Capitalize first letter after period
+autocmd BufWritePre *.txt :%s/^./\u&/g             "Capitalize first letter of the sentence
+autocmd BufWritePre *.txt :%s/\.\(\S\)/\. \1/g      "Remove period and add period and space
+autocmd BufWritePre *.txt :%s/\,\(\S\)/\, \1/g      "Remove comma and add comma and space
+autocmd BufWritePre *.txt :%s/\(.\)\n\(.\)/\1\r\r\2/ "Add an empty line between paragraphs
+autocmd BufWritePre *.txt :%s/\s\+\././g           "Remove space before period.
+autocmd BufWritePre *.txt :%s/\s\+\,/,/g           "Remove space before coma.
+autocmd BufWritePre *.txt :%s/\s\+\!/!/g           "Remove space before !.
+autocmd BufWritePre *.txt :%s/\.\s"/\."/g            "Remove space between . and quotation mark
+autocmd BufWritePre *.txt :%s/?\s"/?"/g            "Remove space between ? and quotation mark
+
+autocmd BufWritePre *.txt :%s/\s?/?/g              "Remove space before ?
+autocmd BufWritePre *.txt :%s/\s:/:/g              "Remove space before :
+autocmd BufWritePre *.txt :%s/\s;/;/g              "Remove space before ;
+
+autocmd BufWritePre *.txt :%s/\:/: /g              "Give a space after :
+autocmd BufWritePre *.txt :%s/\;/; /g              "Give a space after ;
+
+"Final touches. En son duzeltmeler asagida.
+autocmd BufWritePre *.txt :%s/ \+/ /g               "Remove more than one space between words
+autocmd BufWritePre *.txt :%s/\s\+$//e             "Remove space at the end of lines
+
+
+"Following line capitilize quotation mark sentences ends with  .?!...
+autocmd BufWritePre *.txt :%s/\v("\w)(.{-})(\.|!|\?|\.{3})"/\U\1\e\2\3"/g
 
 
 "{{{Fountain autocommands
@@ -230,6 +265,11 @@ endif
 "vnoremap <C-c> "+y
 vnoremap <C-c> "*y :let @+=@*<CR>
 map <C-v> "+p
+"}}}
+
+" {{{ copy paste to clipboard cross files
+set clipboard=unnamed
+
 "}}}
 
 set noshowmode "that must be at the END OF THE VIMRC.En altta insert yazilmasini engelliyor.
