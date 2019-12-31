@@ -21,7 +21,10 @@
 %s/\s\+\././g           "Remove space before period.
 %s/\s\+\,/,/g           "Remove space before coma.
 %s/\s\+\!/!/g           "Remove space before !.
-%s/\s\+\?/?/g           "Remove space before ?.
+====
+Bunu calistiramadim.
+" %s/\s\+\?/?/g           "Remove space before ?.
+====
 %s/.\s"/."/g            "Remove space between . and quotation mark
 %s/!\s"/!"/g            "Remove space between ! and quotation mark
 %s/?\s"/?"/g            "Remove space between ? and quotation mark
