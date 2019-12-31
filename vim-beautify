@@ -1,33 +1,20 @@
-=============================================================================================
-# Noktalama isaretlerini duzeltmek icin asadakilerini kullan.
-# Tek tek kullanmak daha iyi calisti.
+".txt icin yazim hatalarini duzeltme 
 
-# Do IT MANUALLY - OTHERWISE THERE WILL BE PROBLEMS.
+autocmd BufWritePre *.txt :%le                       "Align left
+autocmd BufWritePre *.txt :%s/[\.!?]\s*./\U&\E/g   "Capitalize first letter after period
+autocmd BufWritePre *.txt :%s/^./\u&/g             "Capitalize first letter of the sentence
+autocmd BufWritePre *.txt :%s/\s\+$//e             "Remove space at the end of lines
+autocmd BufWritePre *.txt :%s/ \+/ /g               "Remove more than one space between words
+autocmd BufWritePre *.txt :%s/\.\(\S\)/\. \1/g      "Remove period and add period and space
+autocmd BufWritePre *.txt :%s/\,\(\S\)/\, \1/g      "Remove comma and add comma and space
+autocmd BufWritePre *.txt :%s/\(.\)\n\(.\)/\1\r\r\2/ "Add an empty line between paragraphs
+autocmd BufWritePre *.txt :%s/\s\+\././g           "Remove space before period.
+autocmd BufWritePre *.txt :%s/\s\+\,/,/g           "Remove space before coma.
+autocmd BufWritePre *.txt :%s/\s\+\!/!/g           "Remove space before !.
+autocmd BufWritePre *.txt :%s/\.\s"/\."/g            "Remove space between . and quotation mark
+autocmd BufWritePre *.txt :%s/?\s"/?"/g            "Remove space between ? and quotation mark
 
+autocmd BufWritePre *.txt :%s/\s?/?/g              "Remove space before ?
 
-%le                      "Align left
-%s/ \+/ /g               "Remove more than one space between words
-%s/\.\(\S\)/\. \1/g      "Remove period and add period and space
-%s/\,\(\S\)/\, \1/g      "Remove comma and add comma and space
-
-(%s/\(\S\)\s\+/\1 /g     "Remove more than one space between words. Alternatif.)
-
-%s/\s\+$//e             "Remove space at the end of lines
-%s/^./\u&/g             "Capitalize first letter of the sentence
-%s/[\.!?]\s*./\U&\E/g   "Capitalize first letter after period
-%s/\(.\)\n\(.\)/\1\r\r\2/ "Add an empty line between paragraphs
-
-"ASAGIDAKILERIN BIRLIKTE CALISMASINDA BIR SORUN OLUYOR HEP. BU YUZDEN COMMENTLEDIM. EN IYISI TEK TEK VIM DE KULLANMAK.
-%s/\s\+\././g           "Remove space before period.
-%s/\s\+\,/,/g           "Remove space before coma.
-%s/\s\+\!/!/g           "Remove space before !.
-====
-Bunu calistiramadim.
-" %s/\s\+\?/?/g           "Remove space before ?.
-====
-%s/.\s"/."/g            "Remove space between . and quotation mark
-%s/!\s"/!"/g            "Remove space between ! and quotation mark
-%s/\s?/?/g            "Remove space between ? and quotation mark
-
-Following line capitilize quotation mark sentences ends with  .?!...
-%s/\v("\w)(.{-})(\.|!|\?|\.{3})"/\U\1\e\2\3"/g
+"Following line capitilize quotation mark sentences ends with  .?!...
+autocmd BufWritePre *.txt :%s/\v("\w)(.{-})(\.|!|\?|\.{3})"/\U\1\e\2\3"/g
