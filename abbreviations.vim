@@ -130,3 +130,23 @@ iab Yanyana Yan yana
 iab yanyana yan yana
 iab Karabalık kalabalık
 iab karabalık kalabalık
+iab Pilaka Plaka
+iab pilaka plaka
+iab Varmı Var mı
+iab varmı var mı
+iab Yokmu Yok mu
+iab yokmu yok mu
+iab Pilan Plan
+iab pilan plan
+iab Yada Ya da
+iab yada ya da
+iab Vede Ve de
+iab vede ve de
+iab Mobese MOBESE
+iab mobese MOBESE
+iab istanbul İstanbul
+iab Sıradışı Sıra dışı
+iab sıradışı sıra dışı
+iab Herşey Her şey
+iab herşey her şey
+iab vb vb.
