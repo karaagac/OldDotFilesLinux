@@ -145,6 +145,7 @@ iab vede ve de
 iab Mobese MOBESE
 iab mobese MOBESE
 iab istanbul İstanbul
+iab Istanbul İstanbul
 iab Sıradışı Sıra dışı
 iab sıradışı sıra dışı
 iab Herşey Her şey
