@@ -8,3 +8,7 @@ sudo chmod a+rx /usr/local/bin/youtube-dl
 
 echo "installing i3wm"
 sudo apt-get install i3 suckless-tools i3status
+
+echo "installing fuzzy finder"
+sudo git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
+~/.fzf/install
