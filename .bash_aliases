@@ -145,8 +145,6 @@ alias f-ba="vim ~/.bash_aliases"
 alias f-bashrc="vim ~/.bashrc"
 alias bashrc="source ~/.bashrc"
 
-#pdf shortcut
-alias gram="zathura ~/Desktop/English_Grammar_B_Azar_4th.pdf"
 
 # other files shortcut
 alias bm="~/scripts/terminalbookmarks.sh" #search bookmarks w fuzzy finder on terminal
@@ -158,22 +156,7 @@ alias searchsnippets="~/scripts/searchsnippet.sh" #search snippets and copy the 
 # pgpgpg
 alias sifre="pgpgpg -c"
 
-#{{{ podcast with vlc player - eger cvlc deki c yi silersen normal vlc arayuzu ile acar.
-alias podcast-doublefeature="vlc "https://doublefeature.fm/feed/podcast" &"
-alias podcast-recodedecode="vlc "http://feeds.feedburner.com/Recode-Decode" & "
-alias podcast-motherboard="vlc "http://radiomotherboard.libsyn.com/rss" &"
-alias podcast-radiowest="vlc "http://radiowest.kuer.org/podcasts/220/rss.xml" & "
-alias podcast-tedvideo="vlc "http://feeds.feedburner.com/TEDTalks_video" & "
-alias podcast-rotten="vlc "http://feeds.feedburner.com/RTPodcast" & "
-alias podcast-politico="vlc "http://feeds.soundcloud.com/users/soundcloud:users:284909575/sounds.rss" & "
-alias podcast-LifeHacker="vlc "http://feeds.feedburner.com/TheUpgradeByLifehacker" & "
-alias podcast-moth="vlc "http://feeds.feedburner.com/themothpodcast" & "
-alias podcast-Mint="vlc "https://mintcast.org/category/mp3/feed/" & "
-alias podcast-Decrypted="vlc "http://feeds.bloomberg.fm/BLM3923153289" & "
-alias podcast-Converge-with-Casey-Newton="vlc "https://feeds.feedburner.com/ConvergeWithCaseyNewton" &"
-alias podcast-Tai-Lopez="vlc "http://thetailopezshow.libsyn.com/rss" & "
-alias podcast-fresh-air="firefox "https://www.npr.org/programs/fresh-air/" &"
-#}}}
+
 
 # Hardware
 alias webcam-open="mplayer tv://device=/dev/video01"
@@ -187,32 +170,6 @@ alias f-xresources="vim ~/.Xresources"
 alias f-scripts="vim ~/scripts"
 #}}}
 
-#{{{ Surfraw Search Online w3m
-alias  sr-acronym="sr acronym"
-alias  sr-kisaltma="sr acronym"
-#alias sr-amazon="sr amazon"
-alias  sr-siir="sr azlyrics"
-alias  sr-lyrics="sr azlyrics"
-#alias sr-bbcnews="sr bbcnews"
-#alias sr-bookfinder="sr bookfinder"
-#alias sr-cnn="sr cnn"
-#alias sr-eksisozluk="sr eksisozluk"
-alias  sr-etym="sr etym"
-#alias sr-extratorrent="sr extratorrent"
-#alias sr-gimages="sr gimages"
-alias  sr-google="sr google"
-#alias  sr-imdb="sr imdb"
-#alias sr-imgur="sr imgur"
-alias  sr-webster="sr webster"
-alias  sr-piratebay="sr piratebay"
-#alias sr-reddit="sr reddit"
-#alias  sr-rotten="sr rotten"
-#alias sr-translate="sr translate"
-alias  sr-urban="sr urban"
-#alias sr-wikipedia="sr wikipedia"
-alias  sr-youtube="sr youtube"
-alias  sr-idioms="sr idioms"
-#}}}
 
 #{{{ Translate Turkce Alias
 #English
@@ -277,25 +234,15 @@ dic() {
   }
 #}}}
 
-#{{{ w3m aliases
-alias hurriyet="w3m www.hurriyet.com.tr"
-alias milliyet="w3m www.milliyet.com.tr"
-alias shiftdelete="w3m www.shiftdelete.net"
-alias t24="w3m www.t24.com.tr"
-#}}}
+
 
 #===xterm color scheme reload===
 alias rld-Xresources="xrdb -load ~/.Xresources"
 
 #{{{=====Reddit-channels-for-rtv===
-alias rtv-privacy="rtv --enable-media -s /privacy"
 alias rtv-linux="rtv --enable-media -s /linux"
 alias rtv-opensource="rtv --enable-media -s /opensource"
 alias rtv-commandline="rtv --enable-media -s /commandline"
-alias rtv-motivational="rtv --enable-media -s /GetMotivated"
-alias rtv-Documentaries="rtv --enable-media -s /Documentaries"
-alias rtv-Filmmakers="rtv --enable-media -s /Filmmakers"
-alias rtv-shortcuts="rtv --enable-media -s /shortcuts"
 #}}}
 
 #{{{======Youtube-viewer-channels=
